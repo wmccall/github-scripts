@@ -9,6 +9,7 @@ if [[ "$1" != "" ]]; then
         if [[ $push_message == "fatal: The current branch $branch_name has no upstream branch."* ]]; then
             printf "$($SCRIPT_DIR/helpers/decorate-message.sh "Setting upstream and pushing to remote")\n"
             git push --set-upstream origin $branch_name
+            exit
         else
             printf "$($SCRIPT_DIR/helpers/decorate-message.sh "GitHub Error")\n"
         fi
