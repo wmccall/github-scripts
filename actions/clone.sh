@@ -4,7 +4,7 @@ if [[ "$1" != "" ]]; then
         good_clone=$?
         if [[ $good_clone -eq 0 ]]; then
 		cd $1
-		git config user.name $GITHUB_USERNAME
+		git config user.name $GITHUB_NAME
 		git config user.email $GITHUB_EMAIL
 		exit
 	else

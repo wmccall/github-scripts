@@ -27,6 +27,7 @@ A simple set of scripts to improve simple operations with github.
 export SCRIPT_DIR=""       # Uptate this to git-scripts install location, ex. "$HOME/github-scripts"
 export PROFILE_LOCATION="" # Update this to reference your shell profile location (this file), ex. "$HOME/.bashrc"
 export GITHUB_USERNAME=""  # Update this to your github username
+export GITHUB_NAME=""      # Update this to your github name
 export GITHUB_EMAIL=""     # Update this to your github email
 
 alias gcpall="$SCRIPT_DIR/actions/add-all-commit-push.sh"
