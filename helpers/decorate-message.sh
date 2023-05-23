@@ -16,60 +16,60 @@ vertical="║"
 horizontal="═"
 
 print_decorators () {
-	dec_len=$max_len+6
-	for (( i=0; i<$dec_len; i++ ));
-	do
-		if [[ i -eq 0 ]]; then
-			printf "$1"
-		elif [[ i -ne $dec_len-1 ]]; then
-			printf "$2"
-		else 
-			printf "$3"
-		fi
-	done
-	printf "\n"
+  dec_len=$max_len+6
+  for (( i=0; i<$dec_len; i++ ));
+  do
+    if [[ i -eq 0 ]]; then
+      printf "$1"
+    elif [[ i -ne $dec_len-1 ]]; then
+      printf "$2"
+    else 
+      printf "$3"
+    fi
+  done
+  printf "\n"
 }
 
 print_line () {
-	line="$1"
-	line_len=${#line}
-	line_dif=$(expr $max_len - $line_len)
-	left=$(expr $line_dif / 2)
-	right=$(expr $line_dif - $left)
+  line="$1"
+  line_len=${#line}
+  line_dif=$(expr $max_len - $line_len)
+  left=$(expr $line_dif / 2)
+  right=$(expr $line_dif - $left)
 
-	printf "$vertical  "
-	for (( k=0; k<$left; k++ ));
-	do
-		printf " "
-	done
+  printf "$vertical  "
+  for (( k=0; k<$left; k++ ));
+  do
+    printf " "
+  done
 
-	printf "$line"
+  printf "$line"
 
-	for (( l=0; l<$right; l++ ));
-	do
-		printf " "
-	done
+  for (( l=0; l<$right; l++ ));
+  do
+    printf " "
+  done
 
-	printf "  $vertical\n"
+  printf "  $vertical\n"
 }
 
 print_message () {
-	for (( i=0; i<${#message[@]}; i++ ))
-	do
-		line="${message[$i]}"
-		print_line "$line"
-	done
+  for (( i=0; i<${#message[@]}; i++ ))
+  do
+    line="${message[$i]}"
+    print_line "$line"
+  done
 }
 
 get_max_line_len () {
-	for (( i=0; i<${#message[@]}; i++ ))
-	do
-		line="${message[$i]}"
-		line_len=${#line}
-		if [[ "$line_len" -gt "$max_len" ]]; then
-			max_len=$line_len
-		fi
-	done
+  for (( i=0; i<${#message[@]}; i++ ))
+  do
+    line="${message[$i]}"
+    line_len=${#line}
+    if [[ "$line_len" -gt "$max_len" ]]; then
+      max_len=$line_len
+    fi
+  done
 }
 
 get_max_line_len
