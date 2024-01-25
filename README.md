@@ -24,15 +24,15 @@ A simple set of scripts to improve simple operations with github.
 
 ``` bash
 # Git Scripts Config
-export SCRIPT_DIR=""       # Uptate this to git-scripts install location, ex. "$HOME/github-scripts"
-export PROFILE_LOCATION="" # Update this to reference your shell profile location (this file), ex. "$HOME/.bashrc"
-export GITHUB_USERNAME=""  # Update this to your github username
-export GITHUB_NAME=""      # Update this to your github name
-export GITHUB_EMAIL=""     # Update this to your github email
+export GITHUB_SCRIPTS_DIR="" # Uptate this to git-scripts install location, ex. "$HOME/github-scripts"
+export PROFILE_LOCATION=""   # Update this to reference your shell profile location (this file), ex. "$HOME/.bashrc"
+export GITHUB_USERNAME=""    # Update this to your github username
+export GITHUB_NAME=""        # Update this to your github name
+export GITHUB_EMAIL=""       # Update this to your github email
 
-alias gcpall="$SCRIPT_DIR/actions/add-all-commit-push.sh"
-alias gclone="$SCRIPT_DIR/actions/clone.sh"
-alias pclone="$SCRIPT_DIR/actions/personal-clone.sh"
+alias gcpall="$GITHUB_SCRIPTS_DIR/actions/add-all-commit-push.sh"
+alias gclone="$GITHUB_SCRIPTS_DIR/actions/clone.sh"
+alias pclone="$GITHUB_SCRIPTS_DIR/actions/personal-clone.sh"
 ```
 
 * Source your shell profile
