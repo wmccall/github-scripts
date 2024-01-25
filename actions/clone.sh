@@ -11,4 +11,4 @@ if [[ "$1" != "" ]]; then
     printf "\nrepo '$1' does not exist\n\n"
   fi
 fi
-printf "Usage: $($SCRIPT_DIR/helpers/get-alias.sh $0) <repo-name>\n"
+printf "Usage: $($GITHUB_SCRIPTS_DIR/helpers/get-alias.sh $0) <repo-name>\n"
